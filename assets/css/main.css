@@ -1,0 +1,84 @@
+/* :root {
+   --color-: red;
+}
+li {
+   color: var(--color-)
+} */
+
+.container {
+    width: 100%;
+    padding-left: 150px;
+    background:black;
+    height: 110px;
+    position: fixed;
+    top:0;
+    /* background-repeat: repeat;
+    background-clip: content-box;
+    background-origin: padding-box; */
+    /* background-size: contain; */
+    /* box-sizing:border-box; */
+    background-position: 20px ;
+ }
+
+ #right-top li{
+     display: inline;
+     color: white;
+     font-size: 12px;
+ }
+
+ #right-top ul li{
+    word-spacing:10px;
+ }
+
+ #right-top {
+    height: 40px;
+    padding-left: 110px;
+ }
+
+ img #cart {
+    width: 30px;
+    height: 30px;
+    margin-right: 150px;
+    display: block;
+    position: relative;
+    float: right;
+ }
+
+ #col-left {
+    width: 300px;
+    height: 100px;
+    float:left;
+ }
+
+ #col-right {
+    width: 800px;
+    float:right;
+    height:100px
+ }
+
+ #right-bottom {
+    height: 60px;
+    /* padding-right: 400px; */
+
+ }
+
+ #right-bottom #search {
+     width: 500px;
+     height:30px;
+     margin-top: 0px;
+     display: block;
+     float:left;
+
+ }
+
+ #icon_search img {
+    float:none;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    display:inline;
+    position: absolute;
+    left: 82%;
+    margin-left: -12px;
+    margin-top: 8px;
+ }

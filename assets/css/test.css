@@ -1,0 +1,217 @@
+.nav {
+    min-height: 42px;
+    background-color: #EF5122;
+     /* Nằm chung 1 hàng  */
+    display: flex;
+    /* Chia header */
+    justify-content: space-between;
+}
+
+.nav-list {
+    padding-left: 0px;
+    margin: auto 16px;
+}
+
+.nav-item {
+    color: #fff;
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+/*Form layout */
+.form-container {
+    max-width: 720px;
+    padding: 32px;
+    margin: 36px auto 0 auto ;  
+    background-color: gray;
+}
+
+.form_row {
+    padding: 8px 0;
+    display: flex;
+}
+
+.form_label {
+    min-width: 90px;
+}
+
+.form_input {
+    flex:1;
+}
+
+/* Colum layout */
+.column-layout {
+    margin-top: 36px;
+    padding: 12px 0;
+    background-color: blanchedalmond;
+    display: flex;
+}
+
+.column-item {
+    padding: 0 16px;
+}
+
+/* thêm thuộc tính order: vị trí(1,2,3...n)-> có thể đảo vị trí của sidebar */
+.sidebar-1 {
+    flex: 1;
+    /* order: 3; */
+}
+
+.main-column {
+    flex:2;
+    /* order: 2; */
+}
+
+.sidebar-2 {
+    flex: 1;
+    /* order: 1; */   
+}
+
+/* Feature layout*/
+.feature-layout {
+    display: flex;
+    margin-top: 36px;
+    flex-direction: column;
+
+    /* Chia cột có khoảng cách đều ở giữa  */
+    justify-content: space-around ;
+}
+
+.feature-item {
+    margin-top: 16px;
+    padding: 12px 16px;
+    /* Mặc định flex-direction: row */
+    /* khi dùng flex-basis sẽ tính theo width. ví dụ dưới là width:30%*/
+    flex-basis: 30%;
+}
+
+@media (min-width: 740px) {
+    .feature-layout {
+        flex-direction: row;
+    }
+}
+
+/* :nth-child(hàng hoặc cột muốn chọn) */
+.feature-item:nth-child(1){
+    background-color: rgb(167, 205, 216);
+}
+.feature-item:nth-child(2){
+    background-color: rgb(21, 219, 54);
+}
+.feature-item:nth-child(3){
+    background-color: rgb(151, 127, 127);
+}
+
+/* Wrap layout */
+.wrap-layout {
+    background-color: #fff;
+    margin-top: 36px;
+    padding: 12px 0 32px 0;
+    display: flex; 
+    /* Chia cot */
+    justify-content: space-around;
+    /*thu nhỏ -> xuống dòng */
+    flex-wrap: wrap;
+}
+
+.wrap-item {
+    width: 148px;
+    height: 90px;
+    color: #fff;
+    text-align: center;
+    line-height: 90px;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 20px;
+    background-color: chocolate;
+}
+
+/* center layout */
+.center-layout {
+    background-color:rgb(10, 153, 189);
+    margin: 36px auto 0 auto;
+    padding: 32px;
+    max-width: 640px;
+    height: 360px;
+    display: flex;
+}
+
+.center-item {
+    font-size: 42px;
+    font-weight: 700;
+    margin: auto;
+}
+
+/* Chart layout */
+.chart-layout {
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    height: 320px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    /* Đảo ngược biểu đồ */
+    align-items: flex-end;
+}
+
+.chart-item {
+    /* Đảo ngược biểu đồ */
+    /* align-self: flex-end; */
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    height: var(--percent);
+    background-color: tomato;
+    animation: growth ease-in 1.5s;
+}
+
+/* tìm hiểu cái này rất hay */
+
+@keyframes growth {
+    from {
+        opacity: 0;
+        /* hàm calc dùng để tính toán */
+        /* var(--percent) là class giả mình tự tạo ở trang html */
+        height: calc(var(--percent) - 70%);
+    }
+    to {
+        opacity: 1;
+        height: var(--percent);
+    }
+}
+
+/* End */
+.the-end {
+    margin: 12px auto 48px auto;
+    padding: 32px;
+    max-width: 740px;
+    max-height: 400px;
+    display: flex;
+}
+
+.end-1 {
+    padding: 4px 16px;
+    background-color: rgb(141, 98, 125);
+    flex: 1;
+}
+.end-2 {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+
+.end-2-1 {
+    padding: 4px 16px;
+    background-color: rgb(255, 166, 1);
+    flex:1;
+    display: flex;
+}
+
+.end-2-2 {
+    padding: 4px 16px;
+    background-color: rgb(1, 255, 35);
+    flex:1;
+    display: flex;
+
+}
